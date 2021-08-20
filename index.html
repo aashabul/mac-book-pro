@@ -25,30 +25,30 @@
                     Keyboard - US English</p>
 
                 <!-- memory section -->
-                <label for="memory">Memory</label>
-                <div class="memory-button">
-                    <button class="btn btn-light border-1 border-dark">8GB unified memory</button>
-                    <button class="btn btn-light border-1 border-dark">16GB unified memory</button>
+                <label class="my-2" for="memory">Memory</label>
+                <div class="memory-button d-flex gap-3">
+                    <button id="8gb" class="btn btn-light border-1 border-dark">8GB unified memory</button>
+                    <button id=16gb class="btn btn-light border-1 border-dark">16GB unified memory</button>
                 </div>
 
                 <!-- storage section -->
-                <label for="storage">Storage</label>
-                <div class="storage-button">
+                <label class="my-2" for="storage">Storage</label>
+                <div class="storage-button d-flex gap-3">
                     <button class="btn btn-light border-1 border-dark">256GB SSD storage</button>
                     <button class="btn btn-light border-1 border-dark">512GB SSD storage</button>
                     <button class="btn btn-light border-1 border-dark">1TB SSD storage</button>
                 </div>
 
                 <!-- delivery section -->
-                <label for="delivery">Choose your delivery option</label>
-                <div class="storage-button">
+                <label class="my-2" for="delivery">Choose your delivery option</label>
+                <div class="storage-button d-flex gap-3">
                     <button class="btn btn-light border-1 border-dark">256GB SSD storage</button>
                     <button class="btn btn-light border-1 border-dark">512GB SSD storage</button>
                     <button class="btn btn-light border-1 border-dark">1TB SSD storage</button>
                 </div>
 
                 <!-- price details section -->
-                <table class="table">
+                <table class="table my-5">
                     <tbody>
                         <tr>
                             <td>Best Price</td>
@@ -81,11 +81,12 @@
                 </div>
             </div>
         </section>
-        <section class="show-price text-center">
+        <section class="show-price text-center my-3">
             <h1>Total: $ <span></span></h1>
         </section>
     </main>
     <!-- bootstrap bundle link-->
+    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
