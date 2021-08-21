@@ -22,34 +22,41 @@ let deliveryCost = document.getElementById('delivery-charge')
 memoryLow.addEventListener('click', function () {
     extraMemoryCost.innerText = '0';
     getTotalPrice();
+    finalPrice.innerText = getTotalPrice();
 });
 memoryHigh.addEventListener('click', function () {
     extraMemoryCost.innerText = '180';
     getTotalPrice();
+    finalPrice.innerText = getTotalPrice();
 });
 
 // storage events
 storageLow.addEventListener('click', function () {
     extraStorageCost.innerText = '0';
     getTotalPrice();
+    finalPrice.innerText = getTotalPrice();
 });
 storageMedium.addEventListener('click', function () {
     extraStorageCost.innerText = '100';
     getTotalPrice();
+    finalPrice.innerText = getTotalPrice();
 });
 storageHigh.addEventListener('click', function () {
     extraStorageCost.innerText = '180';
     getTotalPrice();
+    finalPrice.innerText = getTotalPrice();
 });
 
 // delivery events
 deliveryLate.addEventListener('click', function () {
     deliveryCost.innerText = '0';
     getTotalPrice();
+    finalPrice.innerText = getTotalPrice();
 })
 deliveryFast.addEventListener('click', function () {
     deliveryCost.innerText = '20';
     getTotalPrice();
+    finalPrice.innerText = getTotalPrice();
 });
 
 // total cost 
@@ -62,3 +69,16 @@ function getTotalPrice() {
 // final price
 finalPrice = document.getElementById('final-price');
 finalPrice.innerText = getTotalPrice();
+
+// promo code
+promoCode = document.getElementById('promo-code');
+promoButton = document.getElementById('promo-button');
+
+promoButton.addEventListener('click', function () {
+    if (promoCode.value == 'stevekaku') {
+        finalPrice.innerText = getTotalPrice() - getTotalPrice() * .20;
+        promoCode.value = '';
+        return finalPrice.innerText;
+    }
+    promoCode.value = '';
+})
