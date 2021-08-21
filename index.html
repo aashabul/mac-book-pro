@@ -13,7 +13,7 @@
 
 <body>
     <main class="my-5">
-        <section class="showcase d-flex flex-row col-9 m-auto">
+        <section class="showcase d-flex flex-row col-10 m-auto">
             <div class="product-photo col-5">
                 <img class="w-75" src="images/mac.png" alt="mac-book-pro">
             </div>
@@ -25,64 +25,65 @@
                     Keyboard - US English</p>
 
                 <!-- memory section -->
-                <label class="my-2" for="memory">Memory</label>
+                <label class="my-2 fw-bold" for="memory">Memory</label>
                 <div class="memory-button d-flex gap-3">
                     <button id="8gb" class="btn btn-light border-1 border-dark">8GB unified memory</button>
                     <button id=16gb class="btn btn-light border-1 border-dark">16GB unified memory</button>
                 </div>
 
                 <!-- storage section -->
-                <label class="my-2" for="storage">Storage</label>
+                <label class="my-2 fw-bold" for="storage">Storage</label>
                 <div class="storage-button d-flex gap-3">
-                    <button class="btn btn-light border-1 border-dark">256GB SSD storage</button>
-                    <button class="btn btn-light border-1 border-dark">512GB SSD storage</button>
-                    <button class="btn btn-light border-1 border-dark">1TB SSD storage</button>
+                    <button id="low-storage" class="btn btn-light border-1 border-dark">256GB SSD storage</button>
+                    <button id="medium-storage" class="btn btn-light border-1 border-dark">512GB SSD storage</button>
+                    <button id="high-storage" class="btn btn-light border-1 border-dark">1TB SSD storage</button>
                 </div>
 
                 <!-- delivery section -->
-                <label class="my-2" for="delivery">Choose your delivery option</label>
+                <label class="my-2 fw-bold" for="delivery">Choose your delivery option</label>
                 <div class="storage-button d-flex gap-3">
-                    <button class="btn btn-light border-1 border-dark">256GB SSD storage</button>
-                    <button class="btn btn-light border-1 border-dark">512GB SSD storage</button>
-                    <button class="btn btn-light border-1 border-dark">1TB SSD storage</button>
+                    <button id="late-delivery" class="btn btn-light border-1 border-dark">Friday, Aug 25 FREE Prime
+                        Delivery</button>
+                    <button id="fast-delivery" class="btn btn-light border-1 border-dark">Friday, Aug 21 Delivery Charge
+                        $20</button>
                 </div>
 
                 <!-- price details section -->
-                <table class="table my-5">
+                <table class="table w-50 my-5 fw-bold">
                     <tbody>
                         <tr>
                             <td>Best Price</td>
-                            <td>$</td>
+                            <td>$<span id="best-price">1299</span></td>
                         </tr>
                         <tr>
                             <td>Extra Memory Cost</td>
-                            <td>$</td>
+                            <td>$<span id="extra-memory-cost">0</span></td>
                         </tr>
                         <tr>
                             <td>Extra Storage Cost</td>
-                            <td>$</td>
+                            <td>$<span id="extra-storage-cost">0</span></td>
                         </tr>
                         <tr>
                             <td>Delivery Charge</td>
-                            <td>$</td>
+                            <td>$<span id="delivery-charge">0</span></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <td>Total Price</td>
-                        <td>$</td>
+                        <td>$<span id="total-price"></span></td>
                     </tfoot>
                 </table>
 
                 <!-- cupon section -->
-                <label for="promo-code">Add Promo Code</label>
+                <label class="fw-bold" for="promocode">Add Promo Code</label>
                 <div class="d-flex gap-2">
-                    <input type="text">
+                    <input id="promo-code" type="text">
                     <button class="btn btn-danger">Apply</button>
                 </div>
             </div>
         </section>
-        <section class="show-price text-center my-3">
-            <h1>Total: $ <span></span></h1>
+        <section class="show-price text-center my-3 border-top border-secondary">
+            <h1>Total: $ <span id="final-price"></span></h1>
         </section>
     </main>
     <!-- bootstrap bundle link-->
